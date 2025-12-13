@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Core types first -->
+    <Compile Include="Core\Types.fs" />
+
+    <!-- Data layer -->
+    <Compile Include="Data\Database.fs" />
+    <Compile Include="Data\UserRepository.fs" />
+    <Compile Include="Data\ProductRepository.fs" />
+    
+    <!-- Services -->
+    <Compile Include="Services\UserService.fs" />
+    <Compile Include="Services\ProductService.fs" />
+    <Compile Include="Services\CartService.fs" />
+
+    <!-- UI -->
+    <Compile Include="UI\ConsoleUI.fs" />
+    <Compile Include="UI\App.fs" />
+    <Compile Include="UI\MainWindow.fs" />
+
+    <!-- Entry point last -->
+    <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Data.Sqlite" Version="8.0.0" />
+    <PackageReference Include="Avalonia" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Desktop" Version="11.0.9" />
+    <PackageReference Include="Avalonia.Themes.Fluent" Version="11.0.9" />
+  </ItemGroup>
+
+</Project>
+
